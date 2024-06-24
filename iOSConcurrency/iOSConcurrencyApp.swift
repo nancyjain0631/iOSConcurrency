@@ -11,7 +11,7 @@ import SwiftUI
 struct iOSConcurrencyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UsersListView()
         }
     }
 }

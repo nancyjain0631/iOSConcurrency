@@ -21,7 +21,7 @@ struct APIService {
     
     // reason we're using ocmpeltion handler as we don't know how much it'll take to fetch the data
     // since the functions are synchronous in SwiftUI, we want our completion handler to outlive even after the function has expired, for that we're using @escaping
-    func getUsers(completion: @escaping (Result<[UserModel], APIErrorEnum>) -> Void) {
+    func getJson<T: Decodable>(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys, completion: @escaping (Result<T, APIErrorEnum>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(.invalidURL))
             return
@@ -46,9 +46,10 @@ struct APIService {
             }
             
             let decoder = JSONDecoder()
-            
+            decoder.dateDecodingStrategy = dateDecodingStrategy
+            decoder.keyDecodingStrategy = keyDecodingStrategy
             do {
-                let decodedData = try decoder.decode([UserModel].self, from: data)
+                let decodedData = try decoder.decode(T.self, from: data)
                 completion(.success(decodedData))
             } catch {
                 completion(.failure(.decodingError))

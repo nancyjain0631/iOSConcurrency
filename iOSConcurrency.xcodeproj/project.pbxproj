@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E61D5EEF2C272F5300B2D6DE /* iOSConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5EEE2C272F5300B2D6DE /* iOSConcurrencyApp.swift */; };
-		E61D5EF12C272F5300B2D6DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5EF02C272F5300B2D6DE /* ContentView.swift */; };
+		E61D5EF12C272F5300B2D6DE /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5EF02C272F5300B2D6DE /* UsersListView.swift */; };
 		E61D5EF32C272F5400B2D6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61D5EF22C272F5400B2D6DE /* Assets.xcassets */; };
 		E61D5EF62C272F5400B2D6DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61D5EF52C272F5400B2D6DE /* Preview Assets.xcassets */; };
 		E61D5EFF2C273B8400B2D6DE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5EFE2C273B8400B2D6DE /* UserModel.swift */; };
 		E61D5F012C273C2B00B2D6DE /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F002C273C2B00B2D6DE /* PostModel.swift */; };
 		E61D5F042C273CC500B2D6DE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F032C273CC500B2D6DE /* APIService.swift */; };
+		E61D5F082C29D7D700B2D6DE /* UsersListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F072C29D7D700B2D6DE /* UsersListVM.swift */; };
+		E61D5F0A2C29DA7F00B2D6DE /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = E61D5F092C29DA7F00B2D6DE /* users.json */; };
+		E61D5F0C2C29DAA300B2D6DE /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E61D5F0B2C29DAA300B2D6DE /* posts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E61D5EEB2C272F5300B2D6DE /* iOSConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61D5EEE2C272F5300B2D6DE /* iOSConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConcurrencyApp.swift; sourceTree = "<group>"; };
-		E61D5EF02C272F5300B2D6DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E61D5EF02C272F5300B2D6DE /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
 		E61D5EF22C272F5400B2D6DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61D5EF52C272F5400B2D6DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E61D5EFC2C27351700B2D6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E61D5EFE2C273B8400B2D6DE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E61D5F002C273C2B00B2D6DE /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		E61D5F032C273CC500B2D6DE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E61D5F072C29D7D700B2D6DE /* UsersListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListVM.swift; sourceTree = "<group>"; };
+		E61D5F092C29DA7F00B2D6DE /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		E61D5F0B2C29DAA300B2D6DE /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,12 @@
 		E61D5EED2C272F5300B2D6DE /* iOSConcurrency */ = {
 			isa = PBXGroup;
 			children = (
-				E61D5F022C273CB500B2D6DE /* Services */,
 				E61D5EFD2C273B7400B2D6DE /* Models */,
+				E61D5F052C29D79900B2D6DE /* Views */,
+				E61D5F062C29D7C600B2D6DE /* ViewModels */,
+				E61D5F022C273CB500B2D6DE /* Services */,
 				E61D5EFC2C27351700B2D6DE /* Info.plist */,
 				E61D5EEE2C272F5300B2D6DE /* iOSConcurrencyApp.swift */,
-				E61D5EF02C272F5300B2D6DE /* ContentView.swift */,
 				E61D5EF22C272F5400B2D6DE /* Assets.xcassets */,
 				E61D5EF42C272F5400B2D6DE /* Preview Content */,
 			);
@@ -73,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				E61D5EF52C272F5400B2D6DE /* Preview Assets.xcassets */,
+				E61D5F092C29DA7F00B2D6DE /* users.json */,
+				E61D5F0B2C29DAA300B2D6DE /* posts.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -92,6 +101,22 @@
 				E61D5F032C273CC500B2D6DE /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E61D5F052C29D79900B2D6DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E61D5EF02C272F5300B2D6DE /* UsersListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E61D5F062C29D7C600B2D6DE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E61D5F072C29D7D700B2D6DE /* UsersListVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61D5F0A2C29DA7F00B2D6DE /* users.json in Resources */,
 				E61D5EF62C272F5400B2D6DE /* Preview Assets.xcassets in Resources */,
 				E61D5EF32C272F5400B2D6DE /* Assets.xcassets in Resources */,
+				E61D5F0C2C29DAA300B2D6DE /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61D5EF12C272F5300B2D6DE /* ContentView.swift in Sources */,
+				E61D5EF12C272F5300B2D6DE /* UsersListView.swift in Sources */,
+				E61D5F082C29D7D700B2D6DE /* UsersListVM.swift in Sources */,
 				E61D5F042C273CC500B2D6DE /* APIService.swift in Sources */,
 				E61D5F012C273C2B00B2D6DE /* PostModel.swift in Sources */,
 				E61D5EFF2C273B8400B2D6DE /* UserModel.swift in Sources */,
