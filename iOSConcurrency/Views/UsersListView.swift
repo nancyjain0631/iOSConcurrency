@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UsersListView: View {
-    @StateObject var vm = UsersListVM()
+    #warning("remove the forPreview argument or set it to false before uploading")
+    @StateObject var vm = UsersListVM(forPreview: false)
     var body: some View {
         NavigationView {
             List {
