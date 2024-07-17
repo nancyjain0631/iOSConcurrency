@@ -14,13 +14,19 @@ struct UsersListView: View {
         NavigationView {
             List {
                 ForEach(vm.users) { user in
-                    if let userName = user.name {
-                        VStack(alignment: .leading) {
-                            Text(userName)
-                                .font(.title)
-                            Text(user.email ?? "")
+                    NavigationLink {
+                        PostsListView(userId: user.id)
+                    } label: {
+                        if let userName = user.name {
+                            VStack(alignment: .leading) {
+                                Text(userName)
+                                    .font(.title)
+                                Text(user.email ?? "")
+                            }
                         }
                     }
+
+                    
                     
                 }
             }

@@ -19,6 +19,8 @@
 		E61D5F0C2C29DAA300B2D6DE /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E61D5F0B2C29DAA300B2D6DE /* posts.json */; };
 		E61D5F0F2C29DB2A00B2D6DE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F0E2C29DB2A00B2D6DE /* Bundle+Extension.swift */; };
 		E61D5F112C29DCA100B2D6DE /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F102C29DCA100B2D6DE /* MockData.swift */; };
+		E61D5F132C29DE5D00B2D6DE /* PostsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F122C29DE5D00B2D6DE /* PostsListVM.swift */; };
+		E61D5F152C29DF5D00B2D6DE /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D5F142C29DF5D00B2D6DE /* PostsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E61D5F0B2C29DAA300B2D6DE /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		E61D5F0E2C29DB2A00B2D6DE /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		E61D5F102C29DCA100B2D6DE /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		E61D5F122C29DE5D00B2D6DE /* PostsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListVM.swift; sourceTree = "<group>"; };
+		E61D5F142C29DF5D00B2D6DE /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E61D5EF02C272F5300B2D6DE /* UsersListView.swift */,
+				E61D5F142C29DF5D00B2D6DE /* PostsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E61D5F072C29D7D700B2D6DE /* UsersListVM.swift */,
+				E61D5F122C29DE5D00B2D6DE /* PostsListVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 				E61D5F042C273CC500B2D6DE /* APIService.swift in Sources */,
 				E61D5F012C273C2B00B2D6DE /* PostModel.swift in Sources */,
 				E61D5F112C29DCA100B2D6DE /* MockData.swift in Sources */,
+				E61D5F132C29DE5D00B2D6DE /* PostsListVM.swift in Sources */,
 				E61D5EFF2C273B8400B2D6DE /* UserModel.swift in Sources */,
+				E61D5F152C29DF5D00B2D6DE /* PostsListView.swift in Sources */,
 				E61D5EEF2C272F5300B2D6DE /* iOSConcurrencyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
