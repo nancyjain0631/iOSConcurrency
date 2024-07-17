@@ -9,19 +9,33 @@ import Foundation
 
 class UsersListVM: ObservableObject {
     @Published var users: [UserModel] = []
+    @Published var isLoading = false
+    @Published var showAlert = false
+    @Published var errorMessage: String?
     
     func fetchUsers() {
         let apiService = APIService(urlString:  "https://jsonplaceholder.typicode.com/users")
-        apiService.getJson { (result: Result<[UserModel], APIErrorEnum>) in
-            switch result {
-                case .success(let users):
+        isLoading.toggle()
+            apiService.getJson { (result: Result<[UserModel], APIErrorEnum>) in
+                defer {
                     DispatchQueue.main.async {
-                        self.users = users
+                        self.isLoading.toggle()
                     }
-                case .failure(let error):
-                    print(error)
+                }
+                switch result {
+                    case .success(let users):
+                        DispatchQueue.main.async {
+                            self.users = users
+                        }
+                    case .failure(let error):
+                        DispatchQueue.main.async {
+                            self.showAlert = true
+                            self.errorMessage = error.localizedDescription + "\nPlease contact the developer"
+                        }
+                }
             }
-        }
+        
+        
         
     }
 }

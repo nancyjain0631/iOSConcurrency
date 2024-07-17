@@ -9,21 +9,35 @@ import Foundation
 
 class PostsListVM: ObservableObject {
     @Published var posts: [PostModel] = []
+    @Published var isLoading = false
+    @Published var showAlert = false
+    @Published var errorMessage: String?
+    
     var userId: Int?
     
     func fetchPosts() {
         if let userId = userId {
             let apiService = APIService(urlString:  "https://jsonplaceholder.typicode.com/\(userId)/posts")
-            apiService.getJson { (result: Result<[PostModel], APIErrorEnum>) in
-                switch result {
-                    case .success(let posts):
+            isLoading.toggle()
+                apiService.getJson { (result: Result<[PostModel], APIErrorEnum>) in
+                    defer {
                         DispatchQueue.main.async {
-                            self.posts = posts
+                            self.isLoading.toggle()
                         }
-                    case .failure(let error):
-                        print(error)
+                    }
+                    switch result {
+                        case .success(let posts):
+                            DispatchQueue.main.async {
+                                self.posts = posts
+                            }
+                        case .failure(let error):
+                            DispatchQueue.main.async {
+                                self.showAlert = true
+                                self.errorMessage = error.localizedDescription + "\nPlease contact the developer"
+                            }
+                    }
                 }
-            }
+            
         }
     }
 }

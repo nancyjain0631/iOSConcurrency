@@ -14,6 +14,5 @@ struct UserModel: Codable, Identifiable {
     let name: String?
     let username: String?
     let email: String?
-    
 }
 
